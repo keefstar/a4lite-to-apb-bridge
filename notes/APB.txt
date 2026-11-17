@@ -1,0 +1,60 @@
+The APB protocol (Advanced Peripheral Bus) is the simplest member of the AMBA family. 
+It connects low-bandwidth peripherals such as timers, UARTs and GPIO to the rest of a chip.
+Every APB transfer has two phases, Setup and Access, and the signals hardly change between transfers, which keeps both the logic and the power small.
+
+A processor never talks to APB directly.
+
+Imagine I have a CPU that uses AXI to communicate with other components.
+The EAIT accelerator has an APB interface for configuring its registers.
+The probblem is that AXI and APB speak different protocols.
+* AXI has separate address, data, and response channels.
+* APB has a simpler Setup/Access sequence.
+
+Thus, introduce an AXI-to-APB bridge. The bridge is an actual HW model implemented in RTL.
+It receives transactions on its AXI-facing interface and generates the corresponding APB signals.
+The bridge is the APB requester (traditionally called the master), and EAIT is an APB completer (traditionally called the slave).
+
+The bridge is the ONLY requester. Suppose we have three APB peripherals.
+* EAIT accelerator, UART, timer. 
+Instead of giving each peripheral its own seperate bus, you can connect all three to a shared APB bus.
+[AXI-to-APB] -> [Shared APB signals (PADDR, PWRITE, PWDATA, PENABLE)] ->{PSEL0{EAIT}, PSEL1{UART}, PSEL2{TIMER}}
+All three peripherals can see the shared address and control signals.
+But how do they know which one should respond? That's where PSEL comes in.
+
+The address and write data can still be physically visible to all three peripherals.
+But only EAIT should act on them.
+Why is this important? Because otherwise a write intended to start your accelerator could accidentally modify a UART register or timer configuration.
+
+Because there is a single requester, APB needs no arbitration. 
+Because a peripheral answers one transfer at a time, it needs no pipelining either. That is why an APB interface takes only a few dozen gates.
+
+APB SIGNALS:
+All APB signals start with P and are sampled on the rising edge of PCLK. 
+The specification calls the bridge side the Requester and the peripheral side the Completer.
+
+PCLK - Driven by clock source - clock
+PRESETn - System Reset - Reset, active low
+PADDR - Driven by Requester - Byte address, up to 32 bits
+PSELx - Requester - Select, one per completer: this transfer is for you
+PENABLE - Requester - Low in the Setup phase, high in the Access phase
+PSEL PENABLE Meaning
+0	 0	     Idle: No peripheral selected, no transaction
+1	 0	     Setup: A peripheral is selected, and the transaction information is being presented
+1	 1	     Access: The selected peripheral is handling the transaction
+0	 1	     Not a valid active APB transfer
+PWRITE	- Requester - 1 = write, 0 = read
+PWDATA - Requester - Write data: 8/16/32 bits
+PRDATA - Completer - Read data, same width
+PREADY - Completer - High when the completer finishes the transfer (APB3 and later)
+PSLVERR - Completer - High to report an error, optional (APB3 and later)
+
+Setup and Access: An APB interface is always in one of three states:
+IDLE: no transfer. PSEL is low.
+SETUP: the requester raises PSEL and puts the address, direction and (for a write) data on the bus. PENABLE stays low. This state always lasts exactly one cycle.
+ACCESS: the requester raises PENABLE and holds everything else steady. The transfer completes at the rising edge where PREADY is high. Until then the interface stays in ACCESS.
+--
+1. IDLE: The bridge has no transaction to send. PSEL = 0 and PENABLE = 0. It stays here until a request arrives.
+2. SETUP: The bridge selects a peripheral (PSEL = 1) and presents the address, direction and write data. PENABLE = 0. This phase always lasts one clock cycle.
+3. ACCESS: The bridge asserts PENABLE = 1. Now two possibilities arise:
+- PREADY = 0: Stay in ACCESS. The peripheral needs more time.
+- PREADY = 1: Complete the transfer at the rising clock edge. Return to IDLE or proceed directly to SETUP for the next transaction.

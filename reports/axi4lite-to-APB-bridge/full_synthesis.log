@@ -1,0 +1,3202 @@
+
+-- Running command `read_slang --allow-use-before-declare --allow-toplevel-iface-ports --top a4lite_apb_bridge rtl/axi4lite-to-APB-bridge/a4lite_if.sv rtl/axi4lite-to-APB-bridge/apb4_if.sv rtl/axi4lite-to-APB-bridge/intr_if.sv rtl/axi4lite-to-APB-bridge/sync_fifo.sv rtl/axi4lite-to-APB-bridge/a4lite_apb_bridge.sv; synth -top a4lite_apb_bridge; tee -o reports/axi4lite-to-APB-bridge/structural_check.txt check; tee -o reports/axi4lite-to-APB-bridge/synthesis_stats.txt stat' --
+
+1. Executing SLANG frontend.
+Top level design units:
+    a4lite_apb_bridge
+
+
+Build succeeded: 0 errors, 0 warnings
+
+1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$573'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$560'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$519'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$501'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$489'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$449'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$431'.
+Removing empty process `a4lite_apb_bridge.$420'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$390'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$376'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$372'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$333'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$309'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$251'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$233'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$220'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$217'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$213'.
+Removing empty process `a4lite_apb_bridge.$211'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$208'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$204'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$158'.
+Removing empty process `a4lite_apb_bridge.$144'.
+Removing empty process `a4lite_apb_bridge.$136'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$133'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$129'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$79'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$32'.
+Removing empty process `a4lite_apb_bridge.$18'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$6'.
+Cleaned up 25 empty switches.
+
+1.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $449 in module a4lite_apb_bridge.
+Marked 2 switch rules as full_case in process $431 in module a4lite_apb_bridge.
+Marked 4 switch rules as full_case in process $573 in module a4lite_apb_bridge.
+Marked 3 switch rules as full_case in process $390 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $376 in module a4lite_apb_bridge.
+Removed 1 dead cases from process $372 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $372 in module a4lite_apb_bridge.
+Marked 3 switch rules as full_case in process $333 in module a4lite_apb_bridge.
+Marked 11 switch rules as full_case in process $309 in module a4lite_apb_bridge.
+Marked 3 switch rules as full_case in process $251 in module a4lite_apb_bridge.
+Marked 2 switch rules as full_case in process $233 in module a4lite_apb_bridge.
+Marked 8 switch rules as full_case in process $220 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $217 in module a4lite_apb_bridge.
+Removed 1 dead cases from process $213 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $213 in module a4lite_apb_bridge.
+Marked 5 switch rules as full_case in process $560 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $208 in module a4lite_apb_bridge.
+Removed 1 dead cases from process $204 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $204 in module a4lite_apb_bridge.
+Marked 3 switch rules as full_case in process $158 in module a4lite_apb_bridge.
+Marked 3 switch rules as full_case in process $519 in module a4lite_apb_bridge.
+Marked 4 switch rules as full_case in process $501 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $133 in module a4lite_apb_bridge.
+Removed 1 dead cases from process $129 in module a4lite_apb_bridge.
+Marked 1 switch rules as full_case in process $129 in module a4lite_apb_bridge.
+Marked 3 switch rules as full_case in process $79 in module a4lite_apb_bridge.
+Marked 3 switch rules as full_case in process $32 in module a4lite_apb_bridge.
+Marked 5 switch rules as full_case in process $489 in module a4lite_apb_bridge.
+Marked 4 switch rules as full_case in process $6 in module a4lite_apb_bridge.
+Removed a total of 4 dead cases.
+
+1.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 56 redundant assignments.
+Promoted 0 assignments to connections.
+
+1.4. Executing PROC_INIT pass (extract init attributes).
+
+1.5. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~93 debug messages>
+
+1.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\a4lite_apb_bridge.$449'.
+     1/10: $b_resp_buffer.rd_ptr$470
+     2/10: $b_resp_buffer.wr_ptr$469
+     3/10: $b_resp_buffer.count$468
+     4/10: $b_resp_buffer.rd_data$467
+     5/10: $b_resp_buffer.rd_ptr$474
+     6/10: $b_resp_buffer.wr_ptr$473
+     7/10: $b_resp_buffer.count$472
+     8/10: $b_resp_buffer.rd_data$471
+     9/10: $463
+    10/10: $455
+Creating decoders for process `\a4lite_apb_bridge.$431'.
+     1/4: $stalled_psel$434
+     2/4: $stalled_apb_req$433
+     3/4: $stalled_psel$436
+     4/4: $stalled_apb_req$435
+Creating decoders for process `\a4lite_apb_bridge.$573'.
+     1/3: $rvalid_reg$576
+     2/3: $rvalid_reg$577
+     3/3: $rvalid_reg$578
+Creating decoders for process `\a4lite_apb_bridge.$390'.
+     1/4: $decoded_PSEL[3]$410
+     2/4: $decoded_PSEL[2]$405
+     3/4: $decoded_PSEL[1]$400
+     4/4: $decoded_PSEL[0]$395
+Creating decoders for process `\a4lite_apb_bridge.$376'.
+     1/1: $fault_state$378
+Creating decoders for process `\a4lite_apb_bridge.$372'.
+     1/1: $fault_next_state$374
+Creating decoders for process `\a4lite_apb_bridge.$333'.
+     1/3: $TIMEOUT_COUNTER$341
+     2/3: $TIMEOUT_COUNTER$343
+     3/3: $state$342
+Creating decoders for process `\a4lite_apb_bridge.$309'.
+     1/12: $next_state$323
+     2/12: $next_state$324
+     3/12: $next_state$321
+     4/12: $normal_dispatch_pop$322
+     5/12: $normal_dispatch_pop$325
+     6/12: $next_state$316
+     7/12: $next_state$317
+     8/12: $next_state$314
+     9/12: $next_state$330
+    10/12: $normal_dispatch_pop$312
+    11/12: $next_state$311
+    12/12: $normal_dispatch_pop$331
+Creating decoders for process `\a4lite_apb_bridge.$251'.
+     1/10: $dispatch_buffer.rd_ptr$272
+     2/10: $dispatch_buffer.wr_ptr$271
+     3/10: $dispatch_buffer.count$270
+     4/10: $dispatch_buffer.rd_data$269
+     5/10: $dispatch_buffer.rd_ptr$276
+     6/10: $dispatch_buffer.wr_ptr$275
+     7/10: $dispatch_buffer.count$274
+     8/10: $dispatch_buffer.rd_data$273
+     9/10: $265
+    10/10: $257
+Creating decoders for process `\a4lite_apb_bridge.$233'.
+     1/2: $dispatch_payload$234
+     2/2: $dispatch_payload$235
+Creating decoders for process `\a4lite_apb_bridge.$220'.
+     1/10: $grant_read$225
+     2/10: $grant_read$227
+     3/10: $grant_write$226
+     4/10: $grant_read$229
+     5/10: $grant_write$228
+     6/10: $grant_write$222
+     7/10: $grant_read$224
+     8/10: $grant_write$223
+     9/10: $grant_read$231
+    10/10: $grant_write$230
+Creating decoders for process `\a4lite_apb_bridge.$217'.
+     1/1: $arb_state$219
+Creating decoders for process `\a4lite_apb_bridge.$213'.
+     1/1: $arb_next_state$215
+Creating decoders for process `\a4lite_apb_bridge.$560'.
+     1/3: $rresp_payload$562
+     2/3: $rresp_payload$563
+     3/3: $rresp_payload$564
+Creating decoders for process `\a4lite_apb_bridge.$208'.
+     1/1: $read_state$210
+Creating decoders for process `\a4lite_apb_bridge.$204'.
+     1/1: $read_next_state$206
+Creating decoders for process `\a4lite_apb_bridge.$158'.
+     1/10: $ar_buffer.rd_ptr$179
+     2/10: $ar_buffer.wr_ptr$178
+     3/10: $ar_buffer.count$177
+     4/10: $ar_buffer.rd_data$176
+     5/10: $ar_buffer.rd_ptr$183
+     6/10: $ar_buffer.wr_ptr$182
+     7/10: $ar_buffer.count$181
+     8/10: $ar_buffer.rd_data$180
+     9/10: $172
+    10/10: $164
+Creating decoders for process `\a4lite_apb_bridge.$519'.
+     1/10: $r_resp_buffer.rd_ptr$540
+     2/10: $r_resp_buffer.wr_ptr$539
+     3/10: $r_resp_buffer.count$538
+     4/10: $r_resp_buffer.rd_data$537
+     5/10: $r_resp_buffer.rd_ptr$544
+     6/10: $r_resp_buffer.wr_ptr$543
+     7/10: $r_resp_buffer.count$542
+     8/10: $r_resp_buffer.rd_data$541
+     9/10: $533
+    10/10: $525
+Creating decoders for process `\a4lite_apb_bridge.$501'.
+     1/3: $bvalid_reg$504
+     2/3: $bvalid_reg$505
+     3/3: $bvalid_reg$506
+Creating decoders for process `\a4lite_apb_bridge.$133'.
+     1/1: $pair_state$135
+Creating decoders for process `\a4lite_apb_bridge.$129'.
+     1/1: $pair_next_state$131
+Creating decoders for process `\a4lite_apb_bridge.$79'.
+     1/10: $aw_buffer.rd_ptr$100
+     2/10: $aw_buffer.wr_ptr$99
+     3/10: $aw_buffer.count$98
+     4/10: $aw_buffer.rd_data$97
+     5/10: $aw_buffer.rd_ptr$104
+     6/10: $aw_buffer.wr_ptr$103
+     7/10: $aw_buffer.count$102
+     8/10: $aw_buffer.rd_data$101
+     9/10: $93
+    10/10: $85
+Creating decoders for process `\a4lite_apb_bridge.$32'.
+     1/10: $w_buffer.rd_ptr$53
+     2/10: $w_buffer.wr_ptr$52
+     3/10: $w_buffer.count$51
+     4/10: $w_buffer.rd_data$50
+     5/10: $w_buffer.rd_ptr$57
+     6/10: $w_buffer.wr_ptr$56
+     7/10: $w_buffer.count$55
+     8/10: $w_buffer.rd_data$54
+     9/10: $46
+    10/10: $38
+Creating decoders for process `\a4lite_apb_bridge.$489'.
+     1/3: $bresp_payload$491
+     2/3: $bresp_payload$492
+     3/3: $bresp_payload$493
+Creating decoders for process `\a4lite_apb_bridge.$6'.
+     1/3: $write_pair_ready$15
+     2/3: $write_pair_ready$16
+     3/3: $write_pair_ready$17
+
+1.7. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$449'.
+Removing empty process `a4lite_apb_bridge.$449'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$431'.
+Removing empty process `a4lite_apb_bridge.$431'.
+Found and cleaned up 5 empty switches in `\a4lite_apb_bridge.$573'.
+Removing empty process `a4lite_apb_bridge.$573'.
+Found and cleaned up 7 empty switches in `\a4lite_apb_bridge.$390'.
+Removing empty process `a4lite_apb_bridge.$390'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$376'.
+Removing empty process `a4lite_apb_bridge.$376'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$372'.
+Removing empty process `a4lite_apb_bridge.$372'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$333'.
+Removing empty process `a4lite_apb_bridge.$333'.
+Found and cleaned up 15 empty switches in `\a4lite_apb_bridge.$309'.
+Removing empty process `a4lite_apb_bridge.$309'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$251'.
+Removing empty process `a4lite_apb_bridge.$251'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$233'.
+Removing empty process `a4lite_apb_bridge.$233'.
+Found and cleaned up 11 empty switches in `\a4lite_apb_bridge.$220'.
+Removing empty process `a4lite_apb_bridge.$220'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$217'.
+Removing empty process `a4lite_apb_bridge.$217'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$213'.
+Removing empty process `a4lite_apb_bridge.$213'.
+Found and cleaned up 5 empty switches in `\a4lite_apb_bridge.$560'.
+Removing empty process `a4lite_apb_bridge.$560'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$208'.
+Removing empty process `a4lite_apb_bridge.$208'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$204'.
+Removing empty process `a4lite_apb_bridge.$204'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$158'.
+Removing empty process `a4lite_apb_bridge.$158'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$519'.
+Removing empty process `a4lite_apb_bridge.$519'.
+Found and cleaned up 5 empty switches in `\a4lite_apb_bridge.$501'.
+Removing empty process `a4lite_apb_bridge.$501'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$133'.
+Removing empty process `a4lite_apb_bridge.$133'.
+Found and cleaned up 1 empty switch in `\a4lite_apb_bridge.$129'.
+Removing empty process `a4lite_apb_bridge.$129'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$79'.
+Removing empty process `a4lite_apb_bridge.$79'.
+Found and cleaned up 3 empty switches in `\a4lite_apb_bridge.$32'.
+Removing empty process `a4lite_apb_bridge.$32'.
+Found and cleaned up 5 empty switches in `\a4lite_apb_bridge.$489'.
+Removing empty process `a4lite_apb_bridge.$489'.
+Found and cleaned up 5 empty switches in `\a4lite_apb_bridge.$6'.
+Removing empty process `a4lite_apb_bridge.$6'.
+Cleaned up 93 empty switches.
+
+1.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~119 debug messages>
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \a4lite_apb_bridge
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \a4lite_apb_bridge
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.4. Executing CHECK pass (checking for obvious problems).
+Checking module a4lite_apb_bridge...
+Found and reported 0 problems.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 54 unused cells and 401 unused wires.
+<suppressed ~200 debug messages>
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 555 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 451 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 449 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 448 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+<suppressed ~321 debug messages>
+Removed a total of 107 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$664: \write_pair_ready -> 1'0
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$658.
+    dead port 1/2 on $mux $procmux$651.
+    dead port 1/2 on $mux $procmux$648.
+    dead port 2/2 on $mux $procmux$206.
+    dead port 2/2 on $mux $procmux$204.
+    dead port 1/2 on $mux $procmux$302.
+    dead port 2/2 on $mux $procmux$251.
+    dead port 2/2 on $mux $procmux$615.
+    dead port 2/2 on $mux $procmux$194.
+    dead port 2/2 on $mux $procmux$257.
+    dead port 2/2 on $mux $procmux$602.
+    dead port 2/2 on $mux $procmux$182.
+    dead port 2/2 on $mux $procmux$237.
+    dead port 2/2 on $mux $procmux$596.
+    dead port 1/2 on $mux $procmux$180.
+    dead port 2/2 on $mux $procmux$170.
+    dead port 2/2 on $mux $procmux$161.
+    dead port 1/2 on $mux $procmux$311.
+    dead port 2/2 on $mux $procmux$159.
+    dead port 2/2 on $mux $procmux$150.
+    dead port 2/2 on $mux $procmux$227.
+    dead port 2/2 on $mux $procmux$148.
+    dead port 2/2 on $mux $procmux$139.
+    dead port 2/2 on $mux $procmux$313.
+    dead port 2/2 on $mux $procmux$563.
+    dead port 2/2 on $mux $procmux$129.
+    dead port 1/2 on $mux $procmux$127.
+    dead port 2/2 on $mux $procmux$111.
+    dead port 1/2 on $mux $procmux$315.
+    dead port 2/2 on $mux $procmux$321.
+    dead port 1/2 on $mux $procmux$323.
+    dead port 2/2 on $mux $procmux$550.
+    dead port 2/2 on $mux $procmux$544.
+    dead port 2/2 on $mux $procmux$84.
+    dead port 2/2 on $mux $procmux$77.
+    dead port 1/2 on $mux $procmux$74.
+    dead port 2/2 on $mux $procmux$528.
+    dead port 2/2 on $mux $procmux$521.
+    dead port 2/2 on $mux $procmux$328.
+    dead port 1/2 on $mux $procmux$330.
+    dead port 1/2 on $mux $procmux$518.
+    dead port 2/2 on $mux $procmux$61.
+    dead port 1/2 on $mux $procmux$337.
+    dead port 2/2 on $mux $procmux$486.
+    dead port 2/2 on $mux $procmux$677.
+    dead port 2/2 on $mux $procmux$56.
+    dead port 2/2 on $mux $procmux$480.
+    dead port 2/2 on $mux $procmux$473.
+    dead port 1/2 on $mux $procmux$344.
+    dead port 1/2 on $mux $procmux$350.
+    dead port 2/2 on $mux $procmux$467.
+    dead port 2/2 on $mux $procmux$24.
+    dead port 2/2 on $mux $procmux$18.
+    dead port 2/2 on $mux $procmux$434.
+    dead port 2/2 on $mux $procmux$270.
+    dead port 2/2 on $mux $procmux$421.
+    dead port 1/2 on $mux $procmux$352.
+    dead port 1/2 on $mux $procmux$354.
+    dead port 2/2 on $mux $procmux$11.
+    dead port 2/2 on $mux $procmux$5.
+    dead port 2/2 on $mux $procmux$415.
+    dead port 1/2 on $mux $procmux$399.
+    dead port 1/2 on $mux $procmux$360.
+    dead port 1/2 on $mux $procmux$362.
+    dead port 1/2 on $mux $procmux$392.
+    dead port 1/2 on $mux $procmux$389.
+    dead port 2/2 on $mux $procmux$670.
+    dead port 1/2 on $mux $procmux$667.
+    dead port 1/2 on $mux $procmux$369.
+    dead port 1/2 on $mux $procmux$371.
+Removed 70 multiplexer ports.
+<suppressed ~287 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+    Consolidated identical input bits for $mux cell $464:
+      Old ports: A=2'00, B=2'11, Y=$464y
+      New ports: A=1'0, B=1'1, Y=$464y [0]
+      New connections: $464y [1] = $464y [0]
+    Consolidated identical input bits for $mux cell $456:
+      Old ports: A=2'00, B=2'11, Y=$456y
+      New ports: A=1'0, B=1'1, Y=$456y [0]
+      New connections: $456y [1] = $456y [0]
+    New ctrl vector for $pmux cell $procmux$592: $auto$opt_reduce.cc:137:opt_pmux$684
+    New ctrl vector for $pmux cell $procmux$247: $auto$opt_reduce.cc:137:opt_pmux$686
+    Consolidated identical input bits for $mux cell $534:
+      Old ports: A=34'0000000000000000000000000000000000, B=34'1111111111111111111111111111111111, Y=$534y
+      New ports: A=1'0, B=1'1, Y=$534y [0]
+      New connections: $534y [33:1] = { $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] $534y [0] }
+    New ctrl vector for $pmux cell $procmux$559: $auto$opt_reduce.cc:137:opt_pmux$688
+    Consolidated identical input bits for $mux cell $526:
+      Old ports: A=34'0000000000000000000000000000000000, B=34'1111111111111111111111111111111111, Y=$526y
+      New ports: A=1'0, B=1'1, Y=$526y [0]
+      New connections: $526y [33:1] = { $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] $526y [0] }
+    New ctrl vector for $pmux cell $procmux$546: $auto$opt_reduce.cc:137:opt_pmux$690
+    New ctrl vector for $pmux cell $procmux$540: $auto$opt_reduce.cc:137:opt_pmux$692
+    Consolidated identical input bits for $mux cell $266:
+      Old ports: A=72'000000000000000000000000000000000000000000000000000000000000000000000000, B=72'111111111111111111111111111111111111111111111111111111111111111111111111, Y=$266y
+      New ports: A=1'0, B=1'1, Y=$266y [0]
+      New connections: $266y [71:1] = { $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] $266y [0] }
+    Consolidated identical input bits for $mux cell $258:
+      Old ports: A=72'000000000000000000000000000000000000000000000000000000000000000000000000, B=72'111111111111111111111111111111111111111111111111111111111111111111111111, Y=$258y
+      New ports: A=1'0, B=1'1, Y=$258y [0]
+      New connections: $258y [71:1] = { $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] $258y [0] }
+    New ctrl vector for $pmux cell $procmux$482: $auto$opt_reduce.cc:137:opt_pmux$694
+    New ctrl vector for $pmux cell $procmux$469: $auto$opt_reduce.cc:137:opt_pmux$696
+    Consolidated identical input bits for $mux cell $173:
+      Old ports: A=35'00000000000000000000000000000000000, B=35'11111111111111111111111111111111111, Y=$173y
+      New ports: A=1'0, B=1'1, Y=$173y [0]
+      New connections: $173y [34:1] = { $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] $173y [0] }
+    Consolidated identical input bits for $mux cell $165:
+      Old ports: A=35'00000000000000000000000000000000000, B=35'11111111111111111111111111111111111, Y=$165y
+      New ports: A=1'0, B=1'1, Y=$165y [0]
+      New connections: $165y [34:1] = { $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] $165y [0] }
+    New ctrl vector for $pmux cell $procmux$463: $auto$opt_reduce.cc:137:opt_pmux$698
+    New ctrl vector for $pmux cell $procmux$20: $auto$opt_reduce.cc:137:opt_pmux$700
+    New ctrl vector for $pmux cell $procmux$266: $auto$opt_reduce.cc:137:opt_pmux$702
+    New ctrl vector for $pmux cell $procmux$430: $auto$opt_reduce.cc:137:opt_pmux$704
+    New ctrl vector for $pmux cell $procmux$611: $auto$opt_reduce.cc:137:opt_pmux$706
+    Consolidated identical input bits for $mux cell $94:
+      Old ports: A=35'00000000000000000000000000000000000, B=35'11111111111111111111111111111111111, Y=$94y
+      New ports: A=1'0, B=1'1, Y=$94y [0]
+      New connections: $94y [34:1] = { $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] $94y [0] }
+    Consolidated identical input bits for $mux cell $86:
+      Old ports: A=35'00000000000000000000000000000000000, B=35'11111111111111111111111111111111111, Y=$86y
+      New ports: A=1'0, B=1'1, Y=$86y [0]
+      New connections: $86y [34:1] = { $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] $86y [0] }
+    New ctrl vector for $pmux cell $procmux$7: $auto$opt_reduce.cc:137:opt_pmux$708
+    New ctrl vector for $pmux cell $procmux$417: $auto$opt_reduce.cc:137:opt_pmux$710
+    New ctrl vector for $pmux cell $procmux$411: $auto$opt_reduce.cc:137:opt_pmux$712
+    New ctrl vector for $pmux cell $procmux$1: $auto$opt_reduce.cc:137:opt_pmux$714
+    New ctrl vector for $pmux cell $procmux$253: $auto$opt_reduce.cc:137:opt_pmux$716
+    Consolidated identical input bits for $mux cell $47:
+      Old ports: A=36'000000000000000000000000000000000000, B=36'111111111111111111111111111111111111, Y=$47y
+      New ports: A=1'0, B=1'1, Y=$47y [0]
+      New connections: $47y [35:1] = { $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] $47y [0] }
+    Consolidated identical input bits for $mux cell $39:
+      Old ports: A=36'000000000000000000000000000000000000, B=36'111111111111111111111111111111111111, Y=$39y
+      New ports: A=1'0, B=1'1, Y=$39y [0]
+      New connections: $39y [35:1] = { $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] $39y [0] }
+    New ctrl vector for $pmux cell $procmux$598: $auto$opt_reduce.cc:137:opt_pmux$718
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 30 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 396 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 386 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+<suppressed ~30 debug messages>
+Removed a total of 10 cells.
+
+2.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 0 unused cells and 187 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~225 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 386 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.7. Executing FSM pass (extract and optimize FSM).
+
+2.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking a4lite_apb_bridge.stalled_psel as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+Found FSM state register a4lite_apb_bridge.state.
+
+2.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\state' from module `\a4lite_apb_bridge'.
+  found $dff cell for state register: $driver$state
+  root of input selection tree: $procmux$119_Y
+  found reset state: 3'000 (guessed from mux tree)
+  found ctrl input: \s_axi.ARESETn
+  found state code: 3'000
+  found ctrl input: $287y
+  found ctrl input: $286y
+  found ctrl input: $335y
+  found ctrl input: $380y
+  found ctrl input: $procmux$183_CMP
+  found ctrl input: $procmux$218_CMP
+  found ctrl input: $328y
+  found state code: 3'101
+  found ctrl input: $326y
+  found state code: 3'100
+  found ctrl input: \m_apb.PREADY
+  found ctrl input: \apb_timeout
+  found ctrl input: $320y
+  found state code: 3'010
+  found ctrl input: \addr_hit
+  found state code: 3'011
+  found ctrl input: \dispatch_buffer.rd_data [71]
+  found ctrl input: \r_resp_buffer.full
+  found ctrl input: \b_resp_buffer.full
+  found ctrl input: \dispatch_buffer.empty
+  found state code: 3'001
+  found ctrl output: $287y
+  found ctrl output: $286y
+  found ctrl output: $380y
+  found ctrl output: $procmux$183_CMP
+  found ctrl output: $335y
+  found ctrl output: $procmux$218_CMP
+  ctrl inputs: { $328y $326y $320y \r_resp_buffer.full \b_resp_buffer.full \apb_timeout \addr_hit \dispatch_buffer.empty \dispatch_buffer.rd_data [71] \m_apb.PREADY \s_axi.ARESETn }
+  ctrl outputs: { $procmux$218_CMP $procmux$183_CMP $procmux$119_Y $380y $335y $287y $286y }
+  transition:      3'000 11'----------0 ->      3'000 9'100000000
+  transition:      3'000 11'-------0--1 ->      3'001 9'100010000
+  transition:      3'000 11'-------1--1 ->      3'000 9'100000000
+  transition:      3'100 11'----------0 ->      3'000 9'000000001
+  transition:      3'100 11'-0--------1 ->      3'100 9'001000001
+  transition:      3'100 11'-1--------1 ->      3'101 9'001010001
+  transition:      3'010 11'----------0 ->      3'000 9'000001000
+  transition:      3'010 11'------0---1 ->      3'000 9'000001000
+  transition:      3'010 11'------1---1 ->      3'011 9'000111000
+  transition:      3'001 11'----------0 ->      3'000 9'010000000
+  transition:      3'001 11'---0----0-1 ->      3'010 9'010100000
+  transition:      3'001 11'---1----0-1 ->      3'001 9'010010000
+  transition:      3'001 11'----0---1-1 ->      3'010 9'010100000
+  transition:      3'001 11'----1---1-1 ->      3'001 9'010010000
+  transition:      3'101 11'----------0 ->      3'000 9'000000010
+  transition:      3'101 11'0---------1 ->      3'101 9'001010010
+  transition:      3'101 11'1---------1 ->      3'000 9'000000010
+  transition:      3'011 11'----------0 ->      3'000 9'000000100
+  transition:      3'011 11'-----0---01 ->      3'011 9'000110100
+  transition:      3'011 11'-----1---01 ->      3'100 9'001000100
+  transition:      3'011 11'--0------11 ->      3'000 9'000000100
+  transition:      3'011 11'--1------11 ->      3'010 9'000100100
+
+2.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state$719' from module `\a4lite_apb_bridge'.
+
+2.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 19 unused cells and 19 unused wires.
+<suppressed ~21 debug messages>
+
+2.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state$719' from module `\a4lite_apb_bridge'.
+  Removing unused output signal $procmux$119_Y [0].
+  Removing unused output signal $procmux$119_Y [1].
+  Removing unused output signal $procmux$119_Y [2].
+  Removing unused output signal $procmux$183_CMP.
+
+2.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\state$719' from module `\a4lite_apb_bridge' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> -----1
+  100 -> ----1-
+  010 -> ---1--
+  001 -> --1---
+  101 -> -1----
+  011 -> 1-----
+
+2.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\state$719' from module `a4lite_apb_bridge':
+-------------------------------------
+
+  Information on FSM $fsm$\state$719 (\state):
+
+  Number of input signals:   11
+  Number of output signals:   5
+  Number of state bits:       6
+
+  Input signals:
+    0: \s_axi.ARESETn
+    1: \m_apb.PREADY
+    2: \dispatch_buffer.rd_data [71]
+    3: \dispatch_buffer.empty
+    4: \addr_hit
+    5: \apb_timeout
+    6: \b_resp_buffer.full
+    7: \r_resp_buffer.full
+    8: $320y
+    9: $326y
+   10: $328y
+
+  Output signals:
+    0: $286y
+    1: $287y
+    2: $335y
+    3: $380y
+    4: $procmux$218_CMP
+
+  State encoding:
+    0:   6'-----1  <RESET STATE>
+    1:   6'----1-
+    2:   6'---1--
+    3:   6'--1---
+    4:   6'-1----
+    5:   6'1-----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 11'----------0   ->     0 5'10000
+      1:     0 11'-------1--1   ->     0 5'10000
+      2:     0 11'-------0--1   ->     3 5'10000
+      3:     1 11'----------0   ->     0 5'00001
+      4:     1 11'-0--------1   ->     1 5'00001
+      5:     1 11'-1--------1   ->     4 5'00001
+      6:     2 11'----------0   ->     0 5'01000
+      7:     2 11'------0---1   ->     0 5'01000
+      8:     2 11'------1---1   ->     5 5'01000
+      9:     3 11'----------0   ->     0 5'00000
+     10:     3 11'---0----0-1   ->     2 5'00000
+     11:     3 11'----0---1-1   ->     2 5'00000
+     12:     3 11'---1----0-1   ->     3 5'00000
+     13:     3 11'----1---1-1   ->     3 5'00000
+     14:     4 11'----------0   ->     0 5'00010
+     15:     4 11'1---------1   ->     0 5'00010
+     16:     4 11'0---------1   ->     4 5'00010
+     17:     5 11'----------0   ->     0 5'00100
+     18:     5 11'--0------11   ->     0 5'00100
+     19:     5 11'-----1---01   ->     1 5'00100
+     20:     5 11'--1------11   ->     2 5'00100
+     21:     5 11'-----0---01   ->     5 5'00100
+
+-------------------------------------
+
+2.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\state$719' from module `\a4lite_apb_bridge'.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~1 debug messages>
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 407 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~212 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 407 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $driver$write_pair_ready ($dff) from module a4lite_apb_bridge (D = $procmux$664_Y, Q = \write_pair_ready, rval = 1'0).
+Adding SRST signal on $driver$rvalid_reg ($dff) from module a4lite_apb_bridge (D = $procmux$81_Y, Q = \rvalid_reg, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$808 ($sdff) from module a4lite_apb_bridge (D = $procmux$81_Y, Q = \rvalid_reg).
+Adding SRST signal on $driver$w_buffer.rd_data ($dff) from module a4lite_apb_bridge (D = $procmux$611_Y, Q = \w_buffer.rd_data, rval = 36'000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$812 ($sdff) from module a4lite_apb_bridge (D = $34, Q = \w_buffer.rd_data).
+Adding SRST signal on $driver$w_buffer.wr_ptr ($dff) from module a4lite_apb_bridge (D = $procmux$598_Y, Q = \w_buffer.wr_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$814 ($sdff) from module a4lite_apb_bridge (D = $41y, Q = \w_buffer.wr_ptr).
+Adding SRST signal on $driver$w_buffer.rd_ptr ($dff) from module a4lite_apb_bridge (D = $procmux$592_Y, Q = \w_buffer.rd_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$816 ($sdff) from module a4lite_apb_bridge (D = $36y, Q = \w_buffer.rd_ptr).
+Adding SRST signal on $driver$b_resp_buffer.wr_ptr ($dff) from module a4lite_apb_bridge (D = $b_resp_buffer.wr_ptr$469, Q = \b_resp_buffer.wr_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$818 ($sdff) from module a4lite_apb_bridge (D = $458y, Q = \b_resp_buffer.wr_ptr).
+Adding SRST signal on $driver$b_resp_buffer.count ($dff) from module a4lite_apb_bridge (D = $b_resp_buffer.count$468, Q = \b_resp_buffer.count, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$820 ($sdff) from module a4lite_apb_bridge (D = $b_resp_buffer.count$468, Q = \b_resp_buffer.count).
+Adding SRST signal on $driver$b_resp_buffer.rd_data ($dff) from module a4lite_apb_bridge (D = $b_resp_buffer.rd_data$467, Q = \b_resp_buffer.rd_data, rval = 2'00).
+Adding EN signal on $auto$ff.cc:337:slice$824 ($sdff) from module a4lite_apb_bridge (D = $451, Q = \b_resp_buffer.rd_data).
+Adding SRST signal on $driver$aw_buffer.rd_data ($dff) from module a4lite_apb_bridge (D = $aw_buffer.rd_data$97, Q = \aw_buffer.rd_data, rval = 35'00000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$826 ($sdff) from module a4lite_apb_bridge (D = $81, Q = \aw_buffer.rd_data).
+Adding SRST signal on $driver$aw_buffer.wr_ptr ($dff) from module a4lite_apb_bridge (D = $aw_buffer.wr_ptr$99, Q = \aw_buffer.wr_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$828 ($sdff) from module a4lite_apb_bridge (D = $88y, Q = \aw_buffer.wr_ptr).
+Adding SRST signal on $driver$aw_buffer.rd_ptr ($dff) from module a4lite_apb_bridge (D = $aw_buffer.rd_ptr$100, Q = \aw_buffer.rd_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$830 ($sdff) from module a4lite_apb_bridge (D = $83y, Q = \aw_buffer.rd_ptr).
+Adding SRST signal on $driver$pair_state ($dff) from module a4lite_apb_bridge (D = \pair_next_state, Q = \pair_state, rval = 1'0).
+Adding SRST signal on $driver$ar_buffer.rd_data ($dff) from module a4lite_apb_bridge (D = $ar_buffer.rd_data$176, Q = \ar_buffer.rd_data, rval = 35'00000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$833 ($sdff) from module a4lite_apb_bridge (D = $160, Q = \ar_buffer.rd_data).
+Adding SRST signal on $driver$ar_buffer.wr_ptr ($dff) from module a4lite_apb_bridge (D = $ar_buffer.wr_ptr$178, Q = \ar_buffer.wr_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$835 ($sdff) from module a4lite_apb_bridge (D = $167y, Q = \ar_buffer.wr_ptr).
+Adding SRST signal on $driver$ar_buffer.rd_ptr ($dff) from module a4lite_apb_bridge (D = $ar_buffer.rd_ptr$179, Q = \ar_buffer.rd_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$837 ($sdff) from module a4lite_apb_bridge (D = $162y, Q = \ar_buffer.rd_ptr).
+Adding SRST signal on $driver$bvalid_reg ($dff) from module a4lite_apb_bridge (D = $bvalid_reg$505, Q = \bvalid_reg, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$839 ($sdff) from module a4lite_apb_bridge (D = $bvalid_reg$505, Q = \bvalid_reg).
+Adding SRST signal on $driver$read_state ($dff) from module a4lite_apb_bridge (D = \read_next_state, Q = \read_state, rval = 1'0).
+Adding SRST signal on $driver$b_resp_buffer.rd_ptr ($dff) from module a4lite_apb_bridge (D = $b_resp_buffer.rd_ptr$470, Q = \b_resp_buffer.rd_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$844 ($sdff) from module a4lite_apb_bridge (D = $453y, Q = \b_resp_buffer.rd_ptr).
+Adding SRST signal on $driver$arb_state ($dff) from module a4lite_apb_bridge (D = \arb_next_state, Q = \arb_state, rval = 1'0).
+Adding SRST signal on $driver$dispatch_buffer.rd_data ($dff) from module a4lite_apb_bridge (D = $dispatch_buffer.rd_data$269, Q = \dispatch_buffer.rd_data, rval = 72'000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$847 ($sdff) from module a4lite_apb_bridge (D = $253, Q = \dispatch_buffer.rd_data).
+Adding SRST signal on $driver$dispatch_buffer.wr_ptr ($dff) from module a4lite_apb_bridge (D = $dispatch_buffer.wr_ptr$271, Q = \dispatch_buffer.wr_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$849 ($sdff) from module a4lite_apb_bridge (D = $260y, Q = \dispatch_buffer.wr_ptr).
+Adding SRST signal on $driver$dispatch_buffer.rd_ptr ($dff) from module a4lite_apb_bridge (D = $dispatch_buffer.rd_ptr$272, Q = \dispatch_buffer.rd_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$851 ($sdff) from module a4lite_apb_bridge (D = $255y, Q = \dispatch_buffer.rd_ptr).
+Adding SRST signal on $driver$TIMEOUT_COUNTER ($dff) from module a4lite_apb_bridge (D = $340y, Q = \TIMEOUT_COUNTER, rval = 4'0000).
+Adding SRST signal on $driver$fault_state ($dff) from module a4lite_apb_bridge (D = \fault_next_state, Q = \fault_state, rval = 1'0).
+Adding SRST signal on $driver$r_resp_buffer.rd_data ($dff) from module a4lite_apb_bridge (D = $procmux$482_Y, Q = \r_resp_buffer.rd_data, rval = 34'0000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$857 ($sdff) from module a4lite_apb_bridge (D = $521, Q = \r_resp_buffer.rd_data).
+Adding SRST signal on $driver$r_resp_buffer.count ($dff) from module a4lite_apb_bridge (D = $procmux$476_Y, Q = \r_resp_buffer.count, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$859 ($sdff) from module a4lite_apb_bridge (D = $procmux$476_Y, Q = \r_resp_buffer.count).
+Adding SRST signal on $driver$r_resp_buffer.wr_ptr ($dff) from module a4lite_apb_bridge (D = $procmux$469_Y, Q = \r_resp_buffer.wr_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$863 ($sdff) from module a4lite_apb_bridge (D = $528y, Q = \r_resp_buffer.wr_ptr).
+Adding SRST signal on $driver$r_resp_buffer.rd_ptr ($dff) from module a4lite_apb_bridge (D = $procmux$463_Y, Q = \r_resp_buffer.rd_ptr, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$865 ($sdff) from module a4lite_apb_bridge (D = $523y, Q = \r_resp_buffer.rd_ptr).
+Adding SRST signal on $driver$stalled_apb_req.pwrite ($dff) from module a4lite_apb_bridge (D = $procmux$58_Y [71], Q = \stalled_apb_req [71], rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$867 ($sdff) from module a4lite_apb_bridge (D = \dispatch_buffer.rd_data [71], Q = \stalled_apb_req [71]).
+Adding SRST signal on $driver$stalled_apb_req.paddr ($dff) from module a4lite_apb_bridge (D = $procmux$58_Y [70:39], Q = \stalled_apb_req [70:39], rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$869 ($sdff) from module a4lite_apb_bridge (D = \dispatch_buffer.rd_data [70:39], Q = \stalled_apb_req [70:39]).
+Adding SRST signal on $driver$stalled_apb_req.pwdata ($dff) from module a4lite_apb_bridge (D = $procmux$58_Y [38:7], Q = \stalled_apb_req [38:7], rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$871 ($sdff) from module a4lite_apb_bridge (D = \dispatch_buffer.rd_data [38:7], Q = \stalled_apb_req [38:7]).
+Adding SRST signal on $driver$stalled_apb_req.pstrb ($dff) from module a4lite_apb_bridge (D = $procmux$58_Y [6:3], Q = \stalled_apb_req [6:3], rval = 4'0000).
+Adding EN signal on $auto$ff.cc:337:slice$873 ($sdff) from module a4lite_apb_bridge (D = \dispatch_buffer.rd_data [6:3], Q = \stalled_apb_req [6:3]).
+Adding SRST signal on $driver$stalled_apb_req.pprot ($dff) from module a4lite_apb_bridge (D = $procmux$58_Y [2:0], Q = \stalled_apb_req [2:0], rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$875 ($sdff) from module a4lite_apb_bridge (D = \dispatch_buffer.rd_data [2:0], Q = \stalled_apb_req [2:0]).
+Adding SRST signal on $driver$stalled_psel ($dff) from module a4lite_apb_bridge (D = $procmux$53_Y, Q = \stalled_psel, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:337:slice$877 ($sdff) from module a4lite_apb_bridge (D = \decoded_PSEL, Q = \stalled_psel).
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 52 unused cells and 61 unused wires.
+<suppressed ~53 debug messages>
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~4 debug messages>
+
+2.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~139 debug messages>
+
+2.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 0 changes.
+
+2.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 362 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 361 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~139 debug messages>
+
+2.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 0 changes.
+
+2.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 361 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+
+2.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 3) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$734 ($eq).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$45 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$49 ($add).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$742 ($eq).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$755 ($eq).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$764 ($eq).
+Removed top 1 bits (of 3) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$768 ($eq).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$92 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$96 ($add).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$781 ($eq).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$790 ($eq).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$auto$fsm_map.cc:77:implement_pattern_cache$795 ($eq).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$171 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$175 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$264 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$268 ($add).
+Removed top 29 bits (of 32) from port A of cell a4lite_apb_bridge.$295 ($ge).
+Removed top 30 bits (of 32) from port B of cell a4lite_apb_bridge.$295 ($ge).
+Removed top 29 bits (of 32) from port A of cell a4lite_apb_bridge.$297 ($ge).
+Removed top 30 bits (of 32) from port B of cell a4lite_apb_bridge.$297 ($ge).
+Removed top 3 bits (of 4) from port B of cell a4lite_apb_bridge.$340 ($add).
+Removed top 3 bits (of 4) from mux cell a4lite_apb_bridge.$384 ($mux).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$391 ($ge).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$392 ($sub).
+Removed top 19 bits (of 32) from port B of cell a4lite_apb_bridge.$393 ($lt).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$396 ($ge).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$397 ($sub).
+Removed top 19 bits (of 32) from port B of cell a4lite_apb_bridge.$398 ($lt).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$401 ($ge).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$402 ($sub).
+Removed top 19 bits (of 32) from port B of cell a4lite_apb_bridge.$403 ($lt).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$406 ($ge).
+Removed top 1 bits (of 32) from port B of cell a4lite_apb_bridge.$407 ($sub).
+Removed top 19 bits (of 32) from port B of cell a4lite_apb_bridge.$408 ($lt).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$454 ($sub).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$459 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$462 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$466 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$524 ($sub).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$529 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$532 ($add).
+Removed top 2 bits (of 3) from port B of cell a4lite_apb_bridge.$536 ($add).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$procmux$22_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$procmux$249_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$procmux$432_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$procmux$484_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$procmux$561_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell a4lite_apb_bridge.$procmux$613_CMP0 ($eq).
+Removed top 3 bits (of 4) from FF cell a4lite_apb_bridge.$auto$ff.cc:337:slice$878 ($sdffe).
+Removed top 3 bits (of 4) from mux cell a4lite_apb_bridge.$383 ($mux).
+Removed top 3 bits (of 4) from wire a4lite_apb_bridge.$383y.
+
+2.10. Executing PEEPOPT pass (run peephole optimizers).
+
+2.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module a4lite_apb_bridge:
+  creating $macc model for $407 ($sub).
+  creating $macc model for $402 ($sub).
+  creating $macc model for $397 ($sub).
+  creating $macc model for $392 ($sub).
+  creating $macc model for $536 ($add).
+  creating $macc model for $532 ($add).
+  creating $macc model for $454 ($sub).
+  creating $macc model for $529 ($add).
+  creating $macc model for $340 ($add).
+  creating $macc model for $524 ($sub).
+  creating $macc model for $268 ($add).
+  creating $macc model for $264 ($add).
+  creating $macc model for $175 ($add).
+  creating $macc model for $171 ($add).
+  creating $macc model for $459 ($add).
+  creating $macc model for $96 ($add).
+  creating $macc model for $92 ($add).
+  creating $macc model for $462 ($add).
+  creating $macc model for $466 ($add).
+  creating $macc model for $49 ($add).
+  creating $macc model for $45 ($add).
+  creating $alu model for $macc $45.
+  creating $alu model for $macc $49.
+  creating $alu model for $macc $466.
+  creating $alu model for $macc $462.
+  creating $alu model for $macc $92.
+  creating $alu model for $macc $96.
+  creating $alu model for $macc $459.
+  creating $alu model for $macc $171.
+  creating $alu model for $macc $175.
+  creating $alu model for $macc $264.
+  creating $alu model for $macc $268.
+  creating $alu model for $macc $524.
+  creating $alu model for $macc $340.
+  creating $alu model for $macc $529.
+  creating $alu model for $macc $454.
+  creating $alu model for $macc $532.
+  creating $alu model for $macc $536.
+  creating $alu model for $macc $392.
+  creating $alu model for $macc $397.
+  creating $alu model for $macc $402.
+  creating $alu model for $macc $407.
+  creating $alu model for $408 ($lt): new $alu
+  creating $alu model for $406 ($ge): merged with $407.
+  creating $alu model for $403 ($lt): new $alu
+  creating $alu model for $401 ($ge): merged with $402.
+  creating $alu model for $398 ($lt): new $alu
+  creating $alu model for $396 ($ge): merged with $397.
+  creating $alu model for $393 ($lt): new $alu
+  creating $alu model for $391 ($ge): merged with $392.
+  creating $alu model for $297 ($ge): new $alu
+  creating $alu model for $295 ($ge): new $alu
+  creating $alu cell for $295: $auto$alumacc.cc:578:replace_alu$886
+  creating $alu cell for $297: $auto$alumacc.cc:578:replace_alu$899
+  creating $alu cell for $393: $auto$alumacc.cc:578:replace_alu$912
+  creating $alu cell for $398: $auto$alumacc.cc:578:replace_alu$917
+  creating $alu cell for $403: $auto$alumacc.cc:578:replace_alu$922
+  creating $alu cell for $408: $auto$alumacc.cc:578:replace_alu$927
+  creating $alu cell for $407, $406: $auto$alumacc.cc:578:replace_alu$932
+  creating $alu cell for $402, $401: $auto$alumacc.cc:578:replace_alu$945
+  creating $alu cell for $397, $396: $auto$alumacc.cc:578:replace_alu$958
+  creating $alu cell for $392, $391: $auto$alumacc.cc:578:replace_alu$971
+  creating $alu cell for $536: $auto$alumacc.cc:578:replace_alu$984
+  creating $alu cell for $532: $auto$alumacc.cc:578:replace_alu$987
+  creating $alu cell for $454: $auto$alumacc.cc:578:replace_alu$990
+  creating $alu cell for $529: $auto$alumacc.cc:578:replace_alu$993
+  creating $alu cell for $340: $auto$alumacc.cc:578:replace_alu$996
+  creating $alu cell for $524: $auto$alumacc.cc:578:replace_alu$999
+  creating $alu cell for $268: $auto$alumacc.cc:578:replace_alu$1002
+  creating $alu cell for $264: $auto$alumacc.cc:578:replace_alu$1005
+  creating $alu cell for $175: $auto$alumacc.cc:578:replace_alu$1008
+  creating $alu cell for $171: $auto$alumacc.cc:578:replace_alu$1011
+  creating $alu cell for $459: $auto$alumacc.cc:578:replace_alu$1014
+  creating $alu cell for $96: $auto$alumacc.cc:578:replace_alu$1017
+  creating $alu cell for $92: $auto$alumacc.cc:578:replace_alu$1020
+  creating $alu cell for $462: $auto$alumacc.cc:578:replace_alu$1023
+  creating $alu cell for $466: $auto$alumacc.cc:578:replace_alu$1026
+  creating $alu cell for $49: $auto$alumacc.cc:578:replace_alu$1029
+  creating $alu cell for $45: $auto$alumacc.cc:578:replace_alu$1032
+  created 27 $alu and 0 $macc cells.
+
+2.13. Executing SHARE pass (SAT-based resource sharing).
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 391 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~139 debug messages>
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 391 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~139 debug messages>
+
+2.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 0 changes.
+
+2.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 391 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+
+2.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.15. Executing MEMORY pass.
+
+2.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 6 transformations.
+
+2.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing a4lite_apb_bridge.r_resp_buffer.arr write port 0.
+  Analyzing a4lite_apb_bridge.r_resp_buffer.arr write port 1.
+  Analyzing a4lite_apb_bridge.b_resp_buffer.arr write port 0.
+  Analyzing a4lite_apb_bridge.b_resp_buffer.arr write port 1.
+  Analyzing a4lite_apb_bridge.dispatch_buffer.arr write port 0.
+  Analyzing a4lite_apb_bridge.dispatch_buffer.arr write port 1.
+  Analyzing a4lite_apb_bridge.ar_buffer.arr write port 0.
+  Analyzing a4lite_apb_bridge.ar_buffer.arr write port 1.
+  Analyzing a4lite_apb_bridge.aw_buffer.arr write port 0.
+  Analyzing a4lite_apb_bridge.aw_buffer.arr write port 1.
+  Analyzing a4lite_apb_bridge.w_buffer.arr write port 0.
+  Analyzing a4lite_apb_bridge.w_buffer.arr write port 1.
+
+2.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\r_resp_buffer.arr'[0] in module `\a4lite_apb_bridge':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+    Write port 1: don't care on collision.
+Checking read port `\b_resp_buffer.arr'[0] in module `\a4lite_apb_bridge':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+    Write port 1: don't care on collision.
+Checking read port `\dispatch_buffer.arr'[0] in module `\a4lite_apb_bridge':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+    Write port 1: don't care on collision.
+Checking read port `\ar_buffer.arr'[0] in module `\a4lite_apb_bridge':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+    Write port 1: don't care on collision.
+Checking read port `\aw_buffer.arr'[0] in module `\a4lite_apb_bridge':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+    Write port 1: don't care on collision.
+Checking read port `\w_buffer.arr'[0] in module `\a4lite_apb_bridge':
+    merging output FF to cell.
+    Write port 0: don't care on collision.
+    Write port 1: don't care on collision.
+
+2.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 6 unused cells and 220 unused wires.
+<suppressed ~7 debug messages>
+
+2.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating write ports of memory a4lite_apb_bridge.r_resp_buffer.arr by address:
+  Merging ports 0, 1 (address \r_resp_buffer.wr_ptr [1:0]).
+Consolidating write ports of memory a4lite_apb_bridge.b_resp_buffer.arr by address:
+  Merging ports 0, 1 (address \b_resp_buffer.wr_ptr [1:0]).
+Consolidating write ports of memory a4lite_apb_bridge.dispatch_buffer.arr by address:
+  Merging ports 0, 1 (address \dispatch_buffer.wr_ptr [1:0]).
+Consolidating write ports of memory a4lite_apb_bridge.ar_buffer.arr by address:
+  Merging ports 0, 1 (address \ar_buffer.wr_ptr [1:0]).
+Consolidating write ports of memory a4lite_apb_bridge.aw_buffer.arr by address:
+  Merging ports 0, 1 (address \aw_buffer.wr_ptr [1:0]).
+Consolidating write ports of memory a4lite_apb_bridge.w_buffer.arr by address:
+  Merging ports 0, 1 (address \w_buffer.wr_ptr [1:0]).
+
+2.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+
+2.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+
+2.17. Executing OPT pass (performing simple optimizations).
+
+2.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~81 debug messages>
+
+2.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 464 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 374 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+<suppressed ~270 debug messages>
+Removed a total of 90 cells.
+
+2.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 1 unused cells and 163 unused wires.
+<suppressed ~2 debug messages>
+
+2.17.5. Finished fast OPT passes.
+
+2.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \r_resp_buffer.arr in module \a4lite_apb_bridge:
+  created 4 $dff cells and 0 static cells of width 34.
+Extracted data FF from read port 0 of a4lite_apb_bridge.r_resp_buffer.arr: $\r_resp_buffer.arr$rdreg[0]
+  read interface: 1 $dff and 3 $mux cells.
+  write interface: 4 write mux blocks.
+Mapping memory \dispatch_buffer.arr in module \a4lite_apb_bridge:
+  created 4 $dff cells and 0 static cells of width 72.
+Extracted data FF from read port 0 of a4lite_apb_bridge.dispatch_buffer.arr: $\dispatch_buffer.arr$rdreg[0]
+  read interface: 1 $dff and 3 $mux cells.
+  write interface: 4 write mux blocks.
+Mapping memory \ar_buffer.arr in module \a4lite_apb_bridge:
+  created 4 $dff cells and 0 static cells of width 35.
+Extracted data FF from read port 0 of a4lite_apb_bridge.ar_buffer.arr: $\ar_buffer.arr$rdreg[0]
+  read interface: 1 $dff and 3 $mux cells.
+  write interface: 4 write mux blocks.
+Mapping memory \aw_buffer.arr in module \a4lite_apb_bridge:
+  created 4 $dff cells and 0 static cells of width 35.
+Extracted data FF from read port 0 of a4lite_apb_bridge.aw_buffer.arr: $\aw_buffer.arr$rdreg[0]
+  read interface: 1 $dff and 3 $mux cells.
+  write interface: 4 write mux blocks.
+Mapping memory \b_resp_buffer.arr in module \a4lite_apb_bridge:
+  created 4 $dff cells and 0 static cells of width 2.
+Extracted data FF from read port 0 of a4lite_apb_bridge.b_resp_buffer.arr: $\b_resp_buffer.arr$rdreg[0]
+  read interface: 1 $dff and 3 $mux cells.
+  write interface: 4 write mux blocks.
+Mapping memory \w_buffer.arr in module \a4lite_apb_bridge:
+  created 4 $dff cells and 0 static cells of width 36.
+Extracted data FF from read port 0 of a4lite_apb_bridge.w_buffer.arr: $\w_buffer.arr$rdreg[0]
+  read interface: 1 $dff and 3 $mux cells.
+  write interface: 4 write mux blocks.
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~36 debug messages>
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 511 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~157 debug messages>
+
+2.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+    Consolidated identical input bits for $mux cell $561:
+      Old ports: A=2'00, B=2'10, Y=$490y
+      New ports: A=1'0, B=1'1, Y=$490y [1]
+      New connections: $490y [0] = 1'0
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 1 changes.
+
+2.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 511 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $procmux$476 in front of them:
+        $auto$alumacc.cc:578:replace_alu$993
+        $auto$alumacc.cc:578:replace_alu$999
+
+    Found cells that share an operand and can be merged by moving the $mux $procmux$14 in front of them:
+        $auto$alumacc.cc:578:replace_alu$1014
+        $auto$alumacc.cc:578:replace_alu$990
+
+2.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 13 unused cells and 91 unused wires.
+<suppressed ~14 debug messages>
+
+2.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~5 debug messages>
+
+2.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~145 debug messages>
+
+2.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+    Consolidated identical input bits for $mux cell $auto$opt_share.cc:245:merge_operators$1836:
+      Old ports: A=3'111, B=3'001, Y=$auto$rtlil.cc:3333:Mux$1837
+      New ports: A=1'1, B=1'0, Y=$auto$rtlil.cc:3333:Mux$1837 [1]
+      New connections: { $auto$rtlil.cc:3333:Mux$1837 [2] $auto$rtlil.cc:3333:Mux$1837 [0] } = { $auto$rtlil.cc:3333:Mux$1837 [1] 1'1 }
+    Consolidated identical input bits for $mux cell $auto$opt_share.cc:245:merge_operators$1843:
+      Old ports: A=3'111, B=3'001, Y=$auto$rtlil.cc:3333:Mux$1844
+      New ports: A=1'1, B=1'0, Y=$auto$rtlil.cc:3333:Mux$1844 [1]
+      New connections: { $auto$rtlil.cc:3333:Mux$1844 [2] $auto$rtlil.cc:3333:Mux$1844 [0] } = { $auto$rtlil.cc:3333:Mux$1844 [1] 1'1 }
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 2 changes.
+
+2.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 495 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.19.14. Executing OPT_SHARE pass.
+
+2.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\r_resp_buffer.arr[0]$1521 ($dff) from module a4lite_apb_bridge (D = \r_resp_buffer.wr_data, Q = \r_resp_buffer.arr[0]).
+Adding EN signal on $memory\r_resp_buffer.arr[1]$1523 ($dff) from module a4lite_apb_bridge (D = \r_resp_buffer.wr_data, Q = \r_resp_buffer.arr[1]).
+Adding EN signal on $memory\r_resp_buffer.arr[2]$1525 ($dff) from module a4lite_apb_bridge (D = \r_resp_buffer.wr_data, Q = \r_resp_buffer.arr[2]).
+Adding EN signal on $memory\r_resp_buffer.arr[3]$1527 ($dff) from module a4lite_apb_bridge (D = \r_resp_buffer.wr_data, Q = \r_resp_buffer.arr[3]).
+Adding EN signal on $memory\dispatch_buffer.arr[0]$1573 ($dff) from module a4lite_apb_bridge (D = \dispatch_buffer.wr_data, Q = \dispatch_buffer.arr[0]).
+Adding EN signal on $memory\dispatch_buffer.arr[1]$1575 ($dff) from module a4lite_apb_bridge (D = \dispatch_buffer.wr_data, Q = \dispatch_buffer.arr[1]).
+Adding EN signal on $memory\dispatch_buffer.arr[2]$1577 ($dff) from module a4lite_apb_bridge (D = \dispatch_buffer.wr_data, Q = \dispatch_buffer.arr[2]).
+Adding EN signal on $memory\dispatch_buffer.arr[3]$1579 ($dff) from module a4lite_apb_bridge (D = \dispatch_buffer.wr_data, Q = \dispatch_buffer.arr[3]).
+Adding EN signal on $memory\ar_buffer.arr[0]$1625 ($dff) from module a4lite_apb_bridge (D = { \s_axi.ARADDR \s_axi.ARPROT }, Q = \ar_buffer.arr[0]).
+Adding EN signal on $memory\ar_buffer.arr[1]$1627 ($dff) from module a4lite_apb_bridge (D = { \s_axi.ARADDR \s_axi.ARPROT }, Q = \ar_buffer.arr[1]).
+Adding EN signal on $memory\ar_buffer.arr[2]$1629 ($dff) from module a4lite_apb_bridge (D = { \s_axi.ARADDR \s_axi.ARPROT }, Q = \ar_buffer.arr[2]).
+Adding EN signal on $memory\ar_buffer.arr[3]$1631 ($dff) from module a4lite_apb_bridge (D = { \s_axi.ARADDR \s_axi.ARPROT }, Q = \ar_buffer.arr[3]).
+Adding EN signal on $memory\w_buffer.arr[3]$1787 ($dff) from module a4lite_apb_bridge (D = { \s_axi.WDATA \s_axi.WSTRB }, Q = \w_buffer.arr[3]).
+Adding EN signal on $memory\aw_buffer.arr[0]$1677 ($dff) from module a4lite_apb_bridge (D = { \s_axi.AWADDR \s_axi.AWPROT }, Q = \aw_buffer.arr[0]).
+Adding EN signal on $memory\aw_buffer.arr[1]$1679 ($dff) from module a4lite_apb_bridge (D = { \s_axi.AWADDR \s_axi.AWPROT }, Q = \aw_buffer.arr[1]).
+Adding EN signal on $memory\aw_buffer.arr[2]$1681 ($dff) from module a4lite_apb_bridge (D = { \s_axi.AWADDR \s_axi.AWPROT }, Q = \aw_buffer.arr[2]).
+Adding EN signal on $memory\aw_buffer.arr[3]$1683 ($dff) from module a4lite_apb_bridge (D = { \s_axi.AWADDR \s_axi.AWPROT }, Q = \aw_buffer.arr[3]).
+Adding EN signal on $memory\w_buffer.arr[2]$1785 ($dff) from module a4lite_apb_bridge (D = { \s_axi.WDATA \s_axi.WSTRB }, Q = \w_buffer.arr[2]).
+Adding EN signal on $memory\w_buffer.arr[1]$1783 ($dff) from module a4lite_apb_bridge (D = { \s_axi.WDATA \s_axi.WSTRB }, Q = \w_buffer.arr[1]).
+Adding EN signal on $memory\b_resp_buffer.arr[0]$1729 ($dff) from module a4lite_apb_bridge (D = \b_resp_buffer.wr_data, Q = \b_resp_buffer.arr[0]).
+Adding EN signal on $memory\b_resp_buffer.arr[1]$1731 ($dff) from module a4lite_apb_bridge (D = \b_resp_buffer.wr_data, Q = \b_resp_buffer.arr[1]).
+Adding EN signal on $memory\b_resp_buffer.arr[2]$1733 ($dff) from module a4lite_apb_bridge (D = \b_resp_buffer.wr_data, Q = \b_resp_buffer.arr[2]).
+Adding EN signal on $memory\b_resp_buffer.arr[3]$1735 ($dff) from module a4lite_apb_bridge (D = \b_resp_buffer.wr_data, Q = \b_resp_buffer.arr[3]).
+Adding EN signal on $memory\w_buffer.arr[0]$1781 ($dff) from module a4lite_apb_bridge (D = { \s_axi.WDATA \s_axi.WSTRB }, Q = \w_buffer.arr[0]).
+
+2.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 24 unused cells and 29 unused wires.
+<suppressed ~25 debug messages>
+
+2.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~2 debug messages>
+
+2.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \a4lite_apb_bridge..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~61 debug messages>
+
+2.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \a4lite_apb_bridge.
+Performed a total of 0 changes.
+
+2.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 471 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Removed a total of 0 cells.
+
+2.19.22. Executing OPT_SHARE pass.
+
+2.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+
+2.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+
+2.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+2.20. Executing TECHMAP pass (map to technology primitives).
+
+2.20.1. Executing Verilog-2005 frontend: /Users/keefeemacintosh/tools/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/keefeemacintosh/tools/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$2116a631f856d4d4902c2618dca73dafa3b8c9c0\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$ba698a254f9a5947e85cbe7beae6b161eefc5386\_90_alu for cells of type $alu.
+Using template $paramod$d8458b3c47920e79a4e96c2be935e3ae586a4c76\_90_alu for cells of type $alu.
+Using template $paramod$37400008cc205e0c50b9fe312675dfa6c38df87d\_90_alu for cells of type $alu.
+Using template $paramod$f252d71e91501157ef4fbf06e08bbe0b6195ef1a\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using template $paramod$78e969f2586efcf3a5b0b0440bcca0db83d5cca2\_90_alu for cells of type $alu.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~2184 debug messages>
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~1533 debug messages>
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 3759 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3545 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3460 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3424 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3406 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3394 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3387 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3382 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3374 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3369 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3359 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3354 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3347 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3346 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3345 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+<suppressed ~1242 debug messages>
+Removed a total of 414 cells.
+
+2.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 186 unused cells and 1558 unused wires.
+<suppressed ~187 debug messages>
+
+2.21.5. Finished fast OPT passes.
+
+2.22. Executing ABC pass (technology mapping using ABC).
+
+2.22.1. Summary of detected clock domains:
+  16 cells in clk=\s_axi.ACLK, en={ }, arst={ }, srst=$auto$simple.cc:254:combine_resets$806
+  7 cells in clk=\s_axi.ACLK, en=$auto$simple.cc:213:make_patterns_logic$810, arst={ }, srst=!\s_axi.ARESETn
+  7 cells in clk=\s_axi.ACLK, en=$auto$simple.cc:213:make_patterns_logic$841, arst={ }, srst=!\s_axi.ARESETn
+  39 cells in clk=\s_axi.ACLK, en={ }, arst={ }, srst=!\s_axi.ARESETn
+  470 cells in clk=\s_axi.ACLK, en={ }, arst={ }, srst={ }
+  17 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$718, arst={ }, srst=!\s_axi.ARESETn
+  14 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$708, arst={ }, srst=!\s_axi.ARESETn
+  21 cells in clk=\s_axi.ACLK, en=$auto$simple.cc:213:make_patterns_logic$822, arst={ }, srst=!\s_axi.ARESETn
+  17 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$690, arst={ }, srst=!\s_axi.ARESETn
+  17 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$710, arst={ }, srst=!\s_axi.ARESETn
+  20 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$716, arst={ }, srst=!\s_axi.ARESETn
+  16 cells in clk=\s_axi.ACLK, en={ }, arst={ }, srst=!$auto$simple.cc:254:combine_resets$854
+  21 cells in clk=\s_axi.ACLK, en=$auto$simple.cc:213:make_patterns_logic$861, arst={ }, srst=!\s_axi.ARESETn
+  15 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$696, arst={ }, srst=!\s_axi.ARESETn
+  147 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$694, arst={ }, srst=!\s_axi.ARESETn
+  117 cells in clk=\s_axi.ACLK, en=\apb_timeout, arst={ }, srst=!\s_axi.ARESETn
+  549 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$686, arst={ }, srst=!\s_axi.ARESETn
+  194 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$704, arst={ }, srst=!\s_axi.ARESETn
+  188 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$688, arst={ }, srst=!\s_axi.ARESETn
+  19 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$700, arst={ }, srst=!\s_axi.ARESETn
+  193 cells in clk=\s_axi.ACLK, en=$auto$opt_reduce.cc:137:opt_pmux$684, arst={ }, srst=!\s_axi.ARESETn
+  136 cells in clk=\s_axi.ACLK, en=$memory\r_resp_buffer.arr$wren[0][0][0]$y$1548, arst={ }, srst={ }
+  35 cells in clk=\s_axi.ACLK, en=$memory\r_resp_buffer.arr$wren[1][0][0]$y$1556, arst={ }, srst={ }
+  36 cells in clk=\s_axi.ACLK, en=$memory\r_resp_buffer.arr$wren[2][0][0]$y$1564, arst={ }, srst={ }
+  38 cells in clk=\s_axi.ACLK, en=$memory\r_resp_buffer.arr$wren[3][0][0]$y$1570, arst={ }, srst={ }
+  112 cells in clk=\s_axi.ACLK, en=$memory\dispatch_buffer.arr$wren[0][0][0]$y$1600, arst={ }, srst={ }
+  73 cells in clk=\s_axi.ACLK, en=$memory\dispatch_buffer.arr$wren[1][0][0]$y$1608, arst={ }, srst={ }
+  74 cells in clk=\s_axi.ACLK, en=$memory\dispatch_buffer.arr$wren[2][0][0]$y$1616, arst={ }, srst={ }
+  76 cells in clk=\s_axi.ACLK, en=$memory\dispatch_buffer.arr$wren[3][0][0]$y$1622, arst={ }, srst={ }
+  38 cells in clk=\s_axi.ACLK, en=$memory\ar_buffer.arr$wren[0][0][0]$y$1652, arst={ }, srst={ }
+  36 cells in clk=\s_axi.ACLK, en=$memory\ar_buffer.arr$wren[1][0][0]$y$1660, arst={ }, srst={ }
+  37 cells in clk=\s_axi.ACLK, en=$memory\ar_buffer.arr$wren[2][0][0]$y$1668, arst={ }, srst={ }
+  39 cells in clk=\s_axi.ACLK, en=$memory\ar_buffer.arr$wren[3][0][0]$y$1674, arst={ }, srst={ }
+  38 cells in clk=\s_axi.ACLK, en=$memory\w_buffer.arr$wren[3][0][0]$y$1830, arst={ }, srst={ }
+  38 cells in clk=\s_axi.ACLK, en=$memory\aw_buffer.arr$wren[0][0][0]$y$1704, arst={ }, srst={ }
+  36 cells in clk=\s_axi.ACLK, en=$memory\aw_buffer.arr$wren[1][0][0]$y$1712, arst={ }, srst={ }
+  37 cells in clk=\s_axi.ACLK, en=$memory\aw_buffer.arr$wren[2][0][0]$y$1720, arst={ }, srst={ }
+  39 cells in clk=\s_axi.ACLK, en=$memory\aw_buffer.arr$wren[3][0][0]$y$1726, arst={ }, srst={ }
+  37 cells in clk=\s_axi.ACLK, en=$memory\w_buffer.arr$wren[2][0][0]$y$1824, arst={ }, srst={ }
+  38 cells in clk=\s_axi.ACLK, en=$memory\w_buffer.arr$wren[1][0][0]$y$1816, arst={ }, srst={ }
+  5 cells in clk=\s_axi.ACLK, en=$memory\b_resp_buffer.arr$wren[0][0][0]$y$1756, arst={ }, srst={ }
+  3 cells in clk=\s_axi.ACLK, en=$memory\b_resp_buffer.arr$wren[1][0][0]$y$1764, arst={ }, srst={ }
+  7 cells in clk=\s_axi.ACLK, en=$memory\b_resp_buffer.arr$wren[2][0][0]$y$1772, arst={ }, srst={ }
+  6 cells in clk=\s_axi.ACLK, en=$memory\b_resp_buffer.arr$wren[3][0][0]$y$1778, arst={ }, srst={ }
+  41 cells in clk=\s_axi.ACLK, en=$memory\w_buffer.arr$wren[0][0][0]$y$1808, arst={ }, srst={ }
+
+2.22.2. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, synchronously reset by $auto$simple.cc:254:combine_resets$806
+
+2.22.3. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$simple.cc:213:make_patterns_logic$810, synchronously reset by !\s_axi.ARESETn
+
+2.22.4. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$simple.cc:213:make_patterns_logic$841, synchronously reset by !\s_axi.ARESETn
+
+2.22.5. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, synchronously reset by !\s_axi.ARESETn
+
+2.22.6. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK
+
+2.22.7. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$718, synchronously reset by !\s_axi.ARESETn
+
+2.22.8. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$708, synchronously reset by !\s_axi.ARESETn
+
+2.22.9. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$simple.cc:213:make_patterns_logic$822, synchronously reset by !\s_axi.ARESETn
+
+2.22.10. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$690, synchronously reset by !\s_axi.ARESETn
+
+2.22.11. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$710, synchronously reset by !\s_axi.ARESETn
+
+2.22.12. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$716, synchronously reset by !\s_axi.ARESETn
+
+2.22.13. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, synchronously reset by !$auto$simple.cc:254:combine_resets$854
+
+2.22.14. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$simple.cc:213:make_patterns_logic$861, synchronously reset by !\s_axi.ARESETn
+
+2.22.15. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$696, synchronously reset by !\s_axi.ARESETn
+
+2.22.16. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$694, synchronously reset by !\s_axi.ARESETn
+
+2.22.17. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by \apb_timeout, synchronously reset by !\s_axi.ARESETn
+
+2.22.18. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$686, synchronously reset by !\s_axi.ARESETn
+
+2.22.19. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$704, synchronously reset by !\s_axi.ARESETn
+
+2.22.20. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$688, synchronously reset by !\s_axi.ARESETn
+
+2.22.21. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$700, synchronously reset by !\s_axi.ARESETn
+
+2.22.22. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $auto$opt_reduce.cc:137:opt_pmux$684, synchronously reset by !\s_axi.ARESETn
+
+2.22.23. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\r_resp_buffer.arr$wren[0][0][0]$y$1548
+
+2.22.24. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\r_resp_buffer.arr$wren[1][0][0]$y$1556
+
+2.22.25. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\r_resp_buffer.arr$wren[2][0][0]$y$1564
+
+2.22.26. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\r_resp_buffer.arr$wren[3][0][0]$y$1570
+
+2.22.26.1. Executed ABC.
+Extracted 15 gates and 25 wires to a netlist network with 10 inputs and 6 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.26.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        6
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:        internal signals:        9
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+2.22.26.1. Executed ABC.
+Extracted 6 gates and 11 wires to a netlist network with 5 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.26.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+
+2.22.26.1. Executed ABC.
+Extracted 6 gates and 11 wires to a netlist network with 5 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.26.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+
+2.22.27. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\dispatch_buffer.arr$wren[0][0][0]$y$1600
+
+2.22.27.1. Executed ABC.
+Extracted 35 gates and 54 wires to a netlist network with 18 inputs and 20 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.27.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:              NAND cells:        2
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        4
+ABC RESULTS:                OR cells:        9
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:        internal signals:       16
+ABC RESULTS:           input signals:       18
+ABC RESULTS:          output signals:       20
+Removing temp directory.
+
+2.22.28. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\dispatch_buffer.arr$wren[1][0][0]$y$1608
+
+2.22.29. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\dispatch_buffer.arr$wren[2][0][0]$y$1616
+
+2.22.30. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\dispatch_buffer.arr$wren[3][0][0]$y$1622
+
+2.22.31. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\ar_buffer.arr$wren[0][0][0]$y$1652
+
+2.22.32. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\ar_buffer.arr$wren[1][0][0]$y$1660
+
+2.22.33. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\ar_buffer.arr$wren[2][0][0]$y$1668
+
+2.22.34. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\ar_buffer.arr$wren[3][0][0]$y$1674
+
+2.22.35. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\w_buffer.arr$wren[3][0][0]$y$1830
+
+2.22.35.1. Executed ABC.
+Extracted 464 gates and 716 wires to a netlist network with 252 inputs and 84 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       91
+ABC RESULTS:            ANDNOT cells:       10
+ABC RESULTS:               MUX cells:       67
+ABC RESULTS:              NAND cells:       15
+ABC RESULTS:               NOR cells:       13
+ABC RESULTS:                OR cells:       16
+ABC RESULTS:             ORNOT cells:       35
+ABC RESULTS:              XNOR cells:       35
+ABC RESULTS:        internal signals:      380
+ABC RESULTS:           input signals:      252
+ABC RESULTS:          output signals:       84
+Removing temp directory.
+
+2.22.35.1. Executed ABC.
+Extracted 14 gates and 24 wires to a netlist network with 10 inputs and 13 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+
+2.22.35.1. Executed ABC.
+Extracted 11 gates and 19 wires to a netlist network with 8 inputs and 11 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:       11
+Removing temp directory.
+
+2.22.35.1. Executed ABC.
+Extracted 18 gates and 26 wires to a netlist network with 8 inputs and 10 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        8
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:       10
+Removing temp directory.
+
+2.22.35.1. Executed ABC.
+Extracted 14 gates and 24 wires to a netlist network with 10 inputs and 13 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+
+2.22.35.1. Executed ABC.
+Extracted 14 gates and 24 wires to a netlist network with 10 inputs and 13 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+
+2.22.35.1. Executed ABC.
+Extracted 17 gates and 31 wires to a netlist network with 13 inputs and 13 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        4
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:        5
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+
+2.22.35.1. Executed ABC.
+Extracted 12 gates and 19 wires to a netlist network with 7 inputs and 9 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.35.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        4
+ABC RESULTS:               NOT cells:        5
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        3
+ABC RESULTS:           input signals:        7
+ABC RESULTS:          output signals:        9
+Removing temp directory.
+
+2.22.36. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\aw_buffer.arr$wren[0][0][0]$y$1704
+
+2.22.36.1. Executed ABC.
+Extracted 18 gates and 28 wires to a netlist network with 10 inputs and 10 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.36.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        4
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        8
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:       10
+Removing temp directory.
+
+2.22.36.1. Executed ABC.
+Extracted 12 gates and 20 wires to a netlist network with 8 inputs and 12 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.36.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOT cells:        3
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:       12
+Removing temp directory.
+
+2.22.37. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\aw_buffer.arr$wren[1][0][0]$y$1712
+
+2.22.38. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\aw_buffer.arr$wren[2][0][0]$y$1720
+
+2.22.39. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\aw_buffer.arr$wren[3][0][0]$y$1726
+
+2.22.40. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\w_buffer.arr$wren[2][0][0]$y$1824
+
+2.22.41. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\w_buffer.arr$wren[1][0][0]$y$1816
+
+2.22.42. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\b_resp_buffer.arr$wren[0][0][0]$y$1756
+
+2.22.43. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\b_resp_buffer.arr$wren[1][0][0]$y$1764
+
+2.22.43.1. Executed ABC.
+Extracted 110 gates and 250 wires to a netlist network with 140 inputs and 40 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.43.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       34
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               MUX cells:       34
+ABC RESULTS:              NAND cells:       99
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:             ORNOT cells:       33
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       70
+ABC RESULTS:           input signals:      140
+ABC RESULTS:          output signals:       40
+Removing temp directory.
+
+2.22.43.1. Executed ABC.
+Extracted 44 gates and 89 wires to a netlist network with 45 inputs and 12 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.43.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       24
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               MUX cells:        5
+ABC RESULTS:              NAND cells:        4
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:        internal signals:       32
+ABC RESULTS:           input signals:       45
+ABC RESULTS:          output signals:       12
+Removing temp directory.
+
+2.22.43.1. Executed ABC.
+Extracted 474 gates and 813 wires to a netlist network with 339 inputs and 193 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.43.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       89
+ABC RESULTS:            ANDNOT cells:        9
+ABC RESULTS:               BUF cells:        1
+ABC RESULTS:               MUX cells:       74
+ABC RESULTS:              NAND cells:      237
+ABC RESULTS:               NOR cells:       13
+ABC RESULTS:               NOT cells:       49
+ABC RESULTS:                OR cells:       23
+ABC RESULTS:             ORNOT cells:       72
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:        3
+ABC RESULTS:        internal signals:      281
+ABC RESULTS:           input signals:      339
+ABC RESULTS:          output signals:      193
+Removing temp directory.
+
+2.22.43.1. Executed ABC.
+Extracted 156 gates and 373 wires to a netlist network with 217 inputs and 77 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.43.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       35
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               BUF cells:        1
+ABC RESULTS:               MUX cells:       70
+ABC RESULTS:              NAND cells:      103
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:             ORNOT cells:       34
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       79
+ABC RESULTS:           input signals:      217
+ABC RESULTS:          output signals:       77
+Removing temp directory.
+
+2.22.43.1. Executed ABC.
+Extracted 150 gates and 331 wires to a netlist network with 180 inputs and 76 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.43.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       70
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               BUF cells:        1
+ABC RESULTS:               MUX cells:       35
+ABC RESULTS:              NAND cells:      103
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:             ORNOT cells:       34
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       75
+ABC RESULTS:           input signals:      180
+ABC RESULTS:          output signals:       76
+Removing temp directory.
+
+2.22.43.1. Executed ABC.
+Extracted 14 gates and 26 wires to a netlist network with 12 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.43.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               MUX cells:        2
+ABC RESULTS:              NAND cells:        3
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        2
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        6
+ABC RESULTS:           input signals:       12
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+2.22.43.1. Executed ABC.
+Extracted 154 gates and 340 wires to a netlist network with 185 inputs and 78 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.43.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       72
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               BUF cells:        1
+ABC RESULTS:               MUX cells:       36
+ABC RESULTS:              NAND cells:      106
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:             ORNOT cells:       35
+ABC RESULTS:               XOR cells:        2
+ABC RESULTS:        internal signals:       77
+ABC RESULTS:           input signals:      185
+ABC RESULTS:          output signals:       78
+Removing temp directory.
+
+2.22.44. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\b_resp_buffer.arr$wren[2][0][0]$y$1772
+
+2.22.44.1. Executed ABC.
+Extracted 102 gates and 145 wires to a netlist network with 42 inputs and 36 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       67
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:        internal signals:       67
+ABC RESULTS:           input signals:       42
+ABC RESULTS:          output signals:       36
+Removing temp directory.
+
+2.22.44.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+2.22.44.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.44.1. Executed ABC.
+Extracted 4 gates and 8 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.45. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\b_resp_buffer.arr$wren[3][0][0]$y$1778
+
+2.22.46. Extracting gate netlist of module `\a4lite_apb_bridge' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \s_axi.ACLK, enabled by $memory\w_buffer.arr$wren[0][0][0]$y$1808
+
+2.22.46.1. Executed ABC.
+Extracted 40 gates and 85 wires to a netlist network with 44 inputs and 39 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       37
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       44
+ABC RESULTS:          output signals:       39
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 4 gates and 8 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 3 gates and 9 wires to a netlist network with 6 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 4 gates and 8 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 3 gates and 9 wires to a netlist network with 6 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 4 gates and 8 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 2 gates and 7 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 3 gates and 9 wires to a netlist network with 6 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 5 gates and 15 wires to a netlist network with 9 inputs and 3 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:        internal signals:        3
+ABC RESULTS:           input signals:        9
+ABC RESULTS:          output signals:        3
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 4 gates and 8 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+2.22.46.1. Executed ABC.
+Extracted 5 gates and 10 wires to a netlist network with 5 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.22.46.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        3
+ABC RESULTS:           input signals:        5
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+Removing global temp directory.
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module a4lite_apb_bridge.
+<suppressed ~3 debug messages>
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\a4lite_apb_bridge'.
+Computing hashes of 3403 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+Computing hashes of 3397 cells of `\a4lite_apb_bridge'.
+Finding duplicate cells in `\a4lite_apb_bridge'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+2.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \a4lite_apb_bridge..
+Removed 0 unused cells and 2925 unused wires.
+<suppressed ~44 debug messages>
+
+2.23.5. Finished fast OPT passes.
+
+2.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `a4lite_apb_bridge'. Setting top module to a4lite_apb_bridge.
+
+2.24.1. Analyzing design hierarchy..
+Top module:  \a4lite_apb_bridge
+
+2.24.2. Analyzing design hierarchy..
+Top module:  \a4lite_apb_bridge
+Removed 0 unused modules.
+
+2.25. Printing statistics.
+
+=== a4lite_apb_bridge ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1864 wires
+     4617 wire bits
+      172 public wires
+     2428 public wire bits
+       38 ports
+      300 port bits
+     3397 cells
+       90   $_ANDNOT_
+      557   $_AND_
+      856   $_DFFE_PP_
+        6   $_DFF_P_
+      339   $_MUX_
+      674   $_NAND_
+       41   $_NOR_
+       84   $_NOT_
+      250   $_ORNOT_
+       77   $_OR_
+      331   $_SDFFE_PN0P_
+        8   $_SDFF_PN0_
+        1   $_SDFF_PP0_
+       44   $_XNOR_
+       39   $_XOR_
+
+2.26. Executing CHECK pass (checking for obvious problems).
+Checking module a4lite_apb_bridge...
+Found and reported 0 problems.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module a4lite_apb_bridge...
+Found and reported 0 problems.
+
+4. Printing statistics.
+
+=== a4lite_apb_bridge ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1864 wires
+     4617 wire bits
+      172 public wires
+     2428 public wire bits
+       38 ports
+      300 port bits
+     3397 cells
+       90   $_ANDNOT_
+      557   $_AND_
+      856   $_DFFE_PP_
+        6   $_DFF_P_
+      339   $_MUX_
+      674   $_NAND_
+       41   $_NOR_
+       84   $_NOT_
+      250   $_ORNOT_
+       77   $_OR_
+      331   $_SDFFE_PN0P_
+        8   $_SDFF_PN0_
+        1   $_SDFF_PP0_
+       44   $_XNOR_
+       39   $_XOR_
+
